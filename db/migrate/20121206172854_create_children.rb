@@ -4,7 +4,7 @@ class CreateChildren < ActiveRecord::Migration
       t.string :name
       t.string :image
       t.date :dob
-      t.integer :bank
+      t.integer :bank, default: 0
       t.integer :total
 
       t.timestamps

@@ -5,8 +5,13 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 
+group :development do
+  gem 'sqlite3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,3 +41,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'carrierwave'
+gem 'rmagick'
+gem 'devise'
+gem 'simple_form'
+gem 'jquery-ui-rails'
+gem 'quiet_assets', :group => :development
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'

@@ -1,4 +1,7 @@
 class ChildrenController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
   # GET /children
   # GET /children.json
   def index
@@ -80,4 +83,5 @@ class ChildrenController < ApplicationController
       format.json { head :no_content }
     end
   end
+ 
 end

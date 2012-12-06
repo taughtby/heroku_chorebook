@@ -1,5 +1,16 @@
 Chorebook::Application.routes.draw do
-  resources :children
+
+
+  devise_for :users
+
+  resources :children do
+    resources :chores
+    resources :rewards
+  end
+  
+  root to: 'children#index'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
